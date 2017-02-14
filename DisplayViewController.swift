@@ -103,6 +103,10 @@ class DisplayViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.performSegue(withIdentifier: "fromDisplayVCToEnterVC", sender: self)
         
     }
+    @IBAction func pickerViewTapped(_ sender: UIBarButtonItem) {
+        
+        self.performSegue(withIdentifier: "fromDisplayVCToPickerVC", sender: self)
+    }
     
     /*
     // MARK: - Navigation

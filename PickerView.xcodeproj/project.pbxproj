@@ -15,6 +15,7 @@
 		DE9CD9141E5091980058960E /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9CD9131E5091980058960E /* DisplayViewController.swift */; };
 		DE9CD9161E50936E0058960E /* EnterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9CD9151E50936E0058960E /* EnterViewController.swift */; };
 		DE9CD91A1E5097090058960E /* PickerViewCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9CD9191E5097090058960E /* PickerViewCustomCell.swift */; };
+		DE9CD91C1E52275B0058960E /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9CD91B1E52275B0058960E /* PickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		DE9CD9131E5091980058960E /* DisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DisplayViewController.swift; path = ../DisplayViewController.swift; sourceTree = "<group>"; };
 		DE9CD9151E50936E0058960E /* EnterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterViewController.swift; sourceTree = "<group>"; };
 		DE9CD9191E5097090058960E /* PickerViewCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewCustomCell.swift; sourceTree = SOURCE_ROOT; };
+		DE9CD91B1E52275B0058960E /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				DE9CD8FE1E5091330058960E /* AppDelegate.swift */,
 				DE9CD9131E5091980058960E /* DisplayViewController.swift */,
 				DE9CD9151E50936E0058960E /* EnterViewController.swift */,
+				DE9CD91B1E52275B0058960E /* PickerViewController.swift */,
 				DE9CD9191E5097090058960E /* PickerViewCustomCell.swift */,
 				DE9CD9021E5091330058960E /* Main.storyboard */,
 				DE9CD9081E5091330058960E /* Assets.xcassets */,
@@ -145,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE9CD91C1E52275B0058960E /* PickerViewController.swift in Sources */,
 				DE9CD9071E5091330058960E /* PickerView.xcdatamodeld in Sources */,
 				DE9CD9161E50936E0058960E /* EnterViewController.swift in Sources */,
 				DE9CD9141E5091980058960E /* DisplayViewController.swift in Sources */,

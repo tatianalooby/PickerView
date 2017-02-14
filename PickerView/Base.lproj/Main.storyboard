@@ -22,8 +22,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="feR-F9-MMw">
-                                <rect key="frame" x="0.0" y="-8" width="375" height="667"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="feR-F9-MMw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="60" id="fJ5-Q1-eVS" customClass="PickerViewCustomCell" customModule="PickerView" customModuleProvider="target">
@@ -64,6 +64,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="g8V-y6-ezo">
                         <barButtonItem key="backBarButtonItem" title="Cancel" id="0He-1t-hgS"/>
+                        <barButtonItem key="leftBarButtonItem" title="Picker" id="4Lh-fa-xYP">
+                            <connections>
+                                <action selector="pickerViewTapped:" destination="Ibu-um-Vgi" id="Dda-4U-zN6"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="g2x-Kt-dzK">
                             <connections>
                                 <action selector="addButtonTapped:" destination="Ibu-um-Vgi" id="Loa-rH-CJm"/>
@@ -73,11 +78,12 @@
                     <connections>
                         <outlet property="tableView" destination="feR-F9-MMw" id="K6L-Zr-ogd"/>
                         <segue destination="BOa-4H-pI0" kind="show" identifier="fromDisplayVCToEnterVC" id="8bg-BN-IOB"/>
+                        <segue destination="c9G-dU-Xko" kind="presentation" identifier="fromDisplayVCToPickerVC" id="td9-6f-rDr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yRo-2e-f9y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1856.8" y="102.99850074962519"/>
+            <point key="canvasLocation" x="1825" y="-319"/>
         </scene>
         <!--Enter View Controller-->
         <scene sceneID="E8B-4f-b36">
@@ -134,7 +140,65 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rj7-nN-9eX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2612" y="102.99850074962519"/>
+            <point key="canvasLocation" x="1825" y="464"/>
+        </scene>
+        <!--Choose class-->
+        <scene sceneID="xTM-vp-RbO">
+            <objects>
+                <viewController id="ijD-Vs-KJN" customClass="PickerViewController" customModule="PickerView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DiF-GH-7iq"/>
+                        <viewControllerLayoutGuide type="bottom" id="zz8-Hc-q5q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="D4S-Tm-Otu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bVC-Jc-XGf">
+                                <rect key="frame" x="0.0" y="226" width="375" height="216"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M4j-lw-xOR">
+                                <rect key="frame" x="30" y="94" width="315" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="gg0-W6-h98"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="M4j-lw-xOR" firstAttribute="leading" secondItem="D4S-Tm-Otu" secondAttribute="leading" constant="30" id="LhV-Nu-8UL"/>
+                            <constraint firstItem="bVC-Jc-XGf" firstAttribute="centerX" secondItem="D4S-Tm-Otu" secondAttribute="centerX" id="NAC-6f-W1u"/>
+                            <constraint firstItem="bVC-Jc-XGf" firstAttribute="centerY" secondItem="D4S-Tm-Otu" secondAttribute="centerY" id="dtz-dj-dZi"/>
+                            <constraint firstItem="M4j-lw-xOR" firstAttribute="top" secondItem="DiF-GH-7iq" secondAttribute="bottom" constant="30" id="h5J-Tw-FS8"/>
+                            <constraint firstAttribute="trailing" secondItem="M4j-lw-xOR" secondAttribute="trailing" constant="30" id="iCF-A2-eY4"/>
+                            <constraint firstItem="bVC-Jc-XGf" firstAttribute="width" secondItem="D4S-Tm-Otu" secondAttribute="width" id="oQC-Jv-pyh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Choose class" id="EXf-GC-yLt">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="9rx-KF-m7L">
+                            <connections>
+                                <action selector="cancelButtonTapped:" destination="ijD-Vs-KJN" id="ViG-97-hIl"/>
+                                <segue destination="hWf-Th-w02" kind="show" identifier="fromPickerVCToDisplayVC" id="VgW-t1-jk2"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="NGn-Vi-0KM">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="ijD-Vs-KJN" id="T2E-ih-ZtU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="chosenClassNameToDisplay" destination="M4j-lw-xOR" id="Zty-JV-fB0"/>
+                        <outlet property="classPickerView" destination="bVC-Jc-XGf" id="rLx-VO-aha"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YRS-PZ-2oS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3497" y="-1009"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="C9H-9g-HQ2">
@@ -152,7 +216,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8ED-iK-Rsb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1088.8" y="102.99850074962519"/>
+            <point key="canvasLocation" x="1079" y="-321"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vFb-QZ-gJv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c9G-dU-Xko" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YES-Iy-nVL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ijD-Vs-KJN" kind="relationship" relationship="rootViewController" id="mo4-8y-6vA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R3G-HK-xzb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2671" y="-1008"/>
         </scene>
     </scenes>
 </document>
